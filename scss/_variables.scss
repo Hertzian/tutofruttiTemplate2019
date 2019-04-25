@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+@mixin easeOut{
+    transition: all 0.5s ease-in-out;
+}
+
+$blue: #11284b;
+$blueop: rgba(17, 40, 75, 0.95);
+$red: #ee293a;
+$dark: #333;
+$light: #ccc;
+$font-stack:  'Oswald', sans-serif;
