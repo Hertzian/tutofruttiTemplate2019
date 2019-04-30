@@ -1,248 +1,311 @@
-@import'variables';
-@import'functions';
-@import'menu';
+@import "variables";
+@import "functions";
+@import "menu";
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: $blueop;
-    color: $light;
-    font-family: $font-stack;
-    line-height: 1.5;
-    // letter-spacing: .35rem;
+body {
+  background: $blueop;
+  color: $light;
+  font-family: $font-stack;
+  line-height: 1.5;
+  //   letter-spacing: .3rem;
 }
 
 // Utilities
-h{
-    &1{
-        font-size: 3rem;
-    }
-    &2{
-        font-size: 2rem;
-    }
-    &3{
-        font-size: 1.5rem;
-    }
+h1 {
+  font-size: 3rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h1 {
+  font-size: 1.5em;
 }
 
-.container{
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 2rem;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
-.btn{
-    padding: .6rem 2rem;
-    color: #fff;
-    text-decoration: none;
+.btn {
+  padding: 0.6rem 2rem;
+  color: #fff;
+  text-decoration: none;
 
-    &-red{
-        background: $red;
-    }
+  &-red {
+    background: $red;
+  }
 
-    &-blue{
-        background: $blue;
-    }
-    
-    &-red:hover{
-        background: darken($red, 25%);
-        color: $light;
-    }
+  &-blue {
+    background: $blue;
+  }
 
-    &-blue:hover{
-        background: lighten($blue, 25%);
-        color: $dark;
-    }
+  &-red:hover {
+    background: darken($red, 25%);
+    color: $light;
+  }
+
+  &-blue:hover {
+    background: lighten($blue, 25%);
+    color: $dark;
+  }
 }
 
 // navbar
-#brand{
-    background: $red;
-    color: #fff;
-    width: 100vw;
-    display: flex;
-    flex-wrap: nowrap;
-    // justify-content: space-between;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    // position: sticky;
-    z-index: 1;
+#brand {
+  background: $red;
+  color: #fff;
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  // justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  // position: sticky;
+  z-index: 1;
 
-    
-    .logo{
-        background: $blue;
-        padding: 1.4rem 3rem;
-    }
-    
-    // .menu{
-    //     .ham{
-    //         padding-right: 3rem;
-    //         padding-left: 1.5rem;
-    //         // color: #fff;
-    //         justify-content: flex-end;
-    //     }
-    // }
+  .logo {
+    background: $blue;
+    padding: 1.4rem 3rem;
+  }
+
+  // .menu{
+  //     .ham{
+  //         padding-right: 3rem;
+  //         padding-left: 1.5rem;
+  //         // color: #fff;
+  //         justify-content: flex-end;
+  //     }
+  // }
 }
 
 // Showcase
-#showcase{
-    background: $blueop url('../img/background.jpg')no-repeat center center/cover;
-    height: 100vh;
-    // padding: 2rem;
+#showcase {
+  background: $blueop url("../img/background.jpg") no-repeat center center/cover;
+  height: 100vh;
+  // padding: 2rem;
 
-    .showcase-content{
-        // position: absolute;
-        // top: 65px;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
-        background-color: $blueop;
+  .showcase-content {
+    // position: absolute;
+    // top: 65px;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    background-color: $blueop;
+  }
+
+  .showcase-content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    top: -270px;
+
+    div {
+      width: 100%;
     }
 
-    .showcase-content{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 0 2rem;
-        top: -270px;
-
-        div{
-            width: 100%;
-        }
-
-        h1{
-            color: #fff;
-        }
-
-        span{
-            color: $red;
-        }
-
-        p{
-            background: $red;
-            color: #fff;
-            width: 100%;
-            padding: 1.5rem;
-        }
+    h1 {
+      color: #fff;
     }
+
+    span {
+      color: $red;
+    }
+
+    p {
+      background: $red;
+      color: #fff;
+      width: 100%;
+      padding: 1.5rem;
+    }
+  }
 }
 
-#about{
-    position: relative;
-    width: 100%;
-    // height: 500px;
-    background: #fff;
-    box-sizing: border-box;
+#about {
+  position: relative;
+  width: 100%;
+  // height: 500px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 2rem;
+
+  h2 {
+    color: $red;
+
+    span {
+      color: $blue;
+    }
+  }
+
+  p {
+    color: $blue;
+    padding: 1.5rem;
+  }
+
+  .about {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
     padding: 2rem;
-    
-    h2{
-        color: $red;
-        
-
-        span{
-            color: $blue;
-        }
+    img {
+      border-radius: 50%;
+      border: $red solid 3px;
     }
-    
-    p{
-        color: $blue;
-        padding: 1.5rem;
+  }
+
+  .boxes {
+    background: $light;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    li {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
     }
-    
-
-    .about{
-        display: flex;
-        align-content: center;
-        justify-content: flex-start;
-        padding: 2rem;
-        img{
-            border-radius: 50%;
-            border: $red solid 3px;
-        }
-    }
-
-    .boxes{
-        background: $light;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
-        li{
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-
-            img{
-                width: 302.66px;
-            }
-        }
-    }
+  }
 }
 
-#contact{
-    background: $red;
-    color: #fff;
-    height: 80vh;
+#contact {
+  background: $red;
+  color: #fff;
+  height: 80vh;
 
-    h2{
-        font-size: 3rem;
-        padding: 4rem;
-        // text-shadow: 2px 2px 2px $dark;
+  h2 {
+    // font-size: 3rem;
+    padding: 4rem;
+    // text-shadow: 2px 2px 2px $dark;
+  }
+
+  h3 {
+    background: $blue;
+    padding: 1rem 3rem;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    li {
+      list-style: none;
+      border: $blue solid 3px;
+      color: $light;
+      padding: 1.5rem 3rem;
+      font-size: 1.5rem;
+      margin-top: 3rem;
+
+      span {
+        color: $blue;
+      }
     }
 
-    h3{
-        background: $blue;
-        padding: 1rem 3rem;
+    li:hover {
+      list-style: none;
+      border: $blue solid 5px;
+      background: lighten($blue, 10%);
+      color: #fff;
+      padding: 1.5rem 3rem;
+      font-size: 1.6rem;
+      margin-top: 3rem;
+
+      span {
+        color: #fff;
+      }
     }
-
-    ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 1rem;
-
-        li{
-            list-style: none;
-            border: $blue solid 3px;
-            color: $light;
-            padding: 1.5rem 3rem;
-            font-size: 1.5rem;
-            margin-top: 3rem;
-            
-            span{
-                color: $blue;
-            }
-        }
-
-        li:hover{
-            list-style: none;
-            border: $blue solid 5px;
-            background: lighten($blue, 10%);
-            color: #fff;
-            padding: 1.5rem 3rem;
-            font-size: 1.6rem;
-            margin-top: 3rem;
-
-            span{
-                color: #fff;
-            }
-        }
-    }
+  }
 }
 
 // Footer
-#footer{
-    background: $blue;
-    display: flex;
-    justify-content: center;
-    h3{
-        color: #fff;
-        padding: 1.5rem;
+#footer {
+  background: $blue;
+  display: flex;
+  justify-content: center;
+  h3 {
+    color: #fff;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #showcase {
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 0.2rem;
     }
+  }
+  #about {
+    padding: 1rem;
+
+    .about {
+      padding: 0;
+
+      img {
+        display: none;
+      }
+    }
+
+    .boxes {
+      grid-template-columns: 1fr;
+
+      li {
+        padding: 0;
+
+        img {
+          //   height: auto;
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  #contact {
+    h3 {
+      letter-spacing: 0.1rem;
+    }
+
+    ul {
+      li {
+        border: $blue solid 2px;
+        color: $light;
+        padding: 0.2rem 0.5rem;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+
+        span {
+          display: none;
+        }
+      }
+
+      li:hover {
+        border: $blue solid 2px;
+        background: lighten($blue, 10%);
+        color: #fff;
+        padding: 0.4rem 0.7rem;
+        font-size: 1.3rem;
+        margin-top: 0.3rem;
+
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
